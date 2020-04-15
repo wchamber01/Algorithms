@@ -3,7 +3,22 @@
 import argparse
 
 def find_max_profit(prices):
-  pass
+#find highest_value in list
+    highest_value = max(prices[1:])
+    # print(highest_value)
+
+#find lowest_value in list that occurs before the highest value
+    for i in prices:
+        temp_arr = prices.index(highest_value)
+    # print(temp_arr)
+    lowest_value = min(prices[:temp_arr])
+    # print(lowest_value)
+
+#max_profit = highest_value - lowest_value
+    profit = highest_value - lowest_value
+    # print(profit)
+    return profit
+# find_max_profit(prices)
 
 
 if __name__ == '__main__':
